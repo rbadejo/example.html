@@ -11,7 +11,7 @@
         }
 
         header {
-            background-color: #f00; /* Change to red */
+            background-color: #f00;
             color: white;
             padding: 10px;
             text-align: center;
@@ -20,7 +20,7 @@
         nav {
             display: flex;
             justify-content: space-around;
-            background-color: #f00; /* Change to red */
+            background-color: #f00;
             padding: 10px;
         }
 
@@ -28,8 +28,14 @@
             color: white;
             text-decoration: none;
             padding: 10px 20px;
-            border-radius: 20px; /* Add rounded corners */
-            background-color: #555; /* Add background color for tabs */
+            border-radius: 20px;
+            background-color: #555;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #00f;
         }
 
         .local-nav {
@@ -62,10 +68,11 @@
             min-width: 160px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             z-index: 1;
+            flex-direction: column; /* Make the dropdown vertical */
         }
 
         .dropdown:hover .dropdown-content {
-            display: block;
+            display: flex;
         }
     </style>
 </head>
