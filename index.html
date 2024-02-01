@@ -17,98 +17,137 @@
             text-align: center;
         }
 
-        nav {
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #ddd;
+        }
+
+        .profile-picture {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #555;
+        }
+
+        .account-status {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #eee;
+        }
+
+        .quick-links {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #ddd;
+        }
+
+        .notifications {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #eee;
+        }
+
+        .menu-navigation {
             display: flex;
             justify-content: space-around;
             background-color: #f00;
             padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            background-color: #555;
-            transition: background-color 0.3s;
+        .summary-overview {
+            padding: 20px;
+            background-color: #ddd;
         }
 
-        nav a:hover,
-        nav a:focus {
-            background-color: #00f;
+        .customization-options {
+            padding: 20px;
+            background-color: #eee;
         }
 
-        .local-nav {
+        .support-links {
             display: flex;
             justify-content: space-around;
+            padding: 20px;
             background-color: #ddd;
-            padding: 10px;
         }
 
-        .search-bar {
-            display: flex;
-            justify-content: flex-end;
-            background-color: #ddd;
-            padding: 10px;
-        }
-
-        .search-input {
-            padding: 5px;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #ddd;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-            flex-direction: column; /* Make the dropdown vertical */
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: flex;
+        .support-link {
+            color: #00f;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Main Navigation</h1>
+        <h1>Profile Dashboard</h1>
     </header>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+    <section class="profile-info">
+        <div>
+            <div class="profile-picture"></div>
+        </div>
+        <div>
+            <p>User's Name</p>
+            <p>user@email.com</p>
+        </div>
+    </section>
+
+    <section class="account-status">
+        <div>
+            <p>Account Type: Contractor</p>
+        </div>
+        <div>
+            <p>Subscription Status: Active</p>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <a href="#">Tickets in Progress</a>
+        <a href="#">Minutes in Progress</a>
+        <a href="#">Settings</a>
+        <a href="#">Account Settings</a>
+    </section>
+
+    <section class="notifications">
+        <div>
+            <p>Billing Info</p>
+        </div>
+        <div>
+            <p>Availability</p>
+            <p>Request Minutes</p>
+        </div>
+    </section>
+
+    <nav class="menu-navigation">
+        <a href="#">Dashboard</a>
+        <a href="#">Projects</a>
+        <a href="#">Inbox</a>
+        <a href="#">Analytics</a>
+        <a href="#">Settings</a>
     </nav>
 
-    <div class="local-nav">
-        <div class="dropdown">
-            <a href="#">Recent Tickets</a>
-            <div class="dropdown-content">
-                <a href="#">Ticket 1</a>
-                <a href="#">Ticket 2</a>
-                <a href="#">Ticket 3</a>
-                <a href="#">More Tickets</a>
-            </div>
-        </div>
-        <a href="#">Features</a>
-        <a href="#">Reviews</a>
-    </div>
+    <section class="summary-overview">
+        <p>Summary or Overview of the User's Account</p>
+    </section>
 
-    <div class="search-bar">
-        <div class="search-input">
-            <label for="search">🔍 Search</label>
-            <input type="text" id="search" name="search">
-        </div>
-    </div>
+    <section class="customization-options">
+        <p>Customization Options: Language, Layout, etc.</p>
+    </section>
+
+    <section class="support-links">
+        <a class="support-link" href="#">Help Center</a>
+        <a class="support-link" href="#">Contact Support</a>
+        <a class="support-link" href="#">Live Chat</a>
+    </section>
 
 </body>
 </html>
