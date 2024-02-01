@@ -11,7 +11,7 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #f00; /* Change to red */
             color: white;
             padding: 10px;
             text-align: center;
@@ -20,13 +20,16 @@
         nav {
             display: flex;
             justify-content: space-around;
-            background-color: #555;
+            background-color: #f00; /* Change to red */
             padding: 10px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px; /* Add rounded corners */
+            background-color: #555; /* Add background color for tabs */
         }
 
         .local-nav {
@@ -46,6 +49,24 @@
         .search-input {
             padding: 5px;
         }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ddd;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +83,15 @@
     </nav>
 
     <div class="local-nav">
-        <a href="#">Products</a>
+        <div class="dropdown">
+            <a href="#">Recent Tickets</a>
+            <div class="dropdown-content">
+                <a href="#">Ticket 1</a>
+                <a href="#">Ticket 2</a>
+                <a href="#">Ticket 3</a>
+                <a href="#">More Tickets</a>
+            </div>
+        </div>
         <a href="#">Features</a>
         <a href="#">Reviews</a>
     </div>
